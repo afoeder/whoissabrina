@@ -9,7 +9,7 @@
   <title>who.is.sabrina?</title>
 
   <style type="text/css">
-    @import url('https://fonts.googleapis.com/css?family=Lato:300|Playfair+Display:400,700');
+    @import url('https://fonts.googleapis.com/css?family=Lato:300,400|Playfair+Display:400,700');
 
     body {
       font-family: 'Lato', sans-serif;
@@ -17,12 +17,52 @@
       line-height:1.6;
       font-size: 18px;
       color: #091313;
+      margin: 15px;
     }
     a:link, a:active, a:visited, a:hover { color: #1c9cf7; text-decoration: none }
     a:hover { text-decoration: underline; }
 
+    a.button {
+      box-sizing: border-box;
+      line-height: 1;
+      display: inline-block;
+      zoom: 1;
+      white-space: nowrap;
+      vertical-align: middle;
+      text-align: center;
+      cursor: pointer;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      font-family: inherit;
+      font-size: 120%;
+      padding: .5em 1em;
+      color: #444;
+      color: white;
+      border: 1px solid #999;
+      border: transparent;
+      background-color: #1c9cf7;
+      text-decoration: none;
+      border-radius: 2px;
+      font-weight: 400;
+    }
+    a.button:focus, a.button:hover {
+      background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
+    }
+    a.button:focus, a.button:active, a.button:hover { outline: 0 }
+
+    section {
+      margin-bottom: 7rem;
+    }
+
     h1, h2, h3, h4 {
       font-family: 'Playfair Display', serif;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
     }
 
     h1, h2 {
@@ -30,16 +70,26 @@
       text-align: center;
       font-size: 4rem;
     }
-    h1 small {
-      display: block;
-      text-transform: none;
-      font-weight: normal;
-      margin-top: 1rem;
+
+    p#tagline {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
       font-size: 2.5rem;
     }
 
-    figure#stickies img {
+    section#intro {
+      max-width: 960px;
       margin: 0 auto;
+    }
+
+    picture#stickies img,
+    picture#interest_stickies img {
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+      max-width: 1440px;
     }
 
     ol#timeline {
@@ -117,6 +167,19 @@
       margin: 0;
     }
 
+    section#downloads p {
+      text-align: center;
+    }
+    section#downloads ul {
+      padding: 0;
+      margin: 0 auto;
+      max-width: 640px;
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
     footer {
       margin-top: 6rem;
       text-align: center;
@@ -160,6 +223,15 @@
         margin-top: 5px;
       }
       ol#timeline ul { hyphens: auto; }
+
+      section#downloads ul {
+        display: block;
+      }
+      section#downloads ul li {
+        text-align: center;
+        margin-bottom: .5rem;
+      }
+
     }
 
   </style>
@@ -168,143 +240,178 @@
 <body>
 
 <main>
-  <h1>who.is.sabrina?
-    <small>Technisch gesehen sind wir alle ein Konglomerat aus Eigenschaften.</small>
-  </h1>
+  <h1>who.is.sabrina?</h1>
 
-  <figure id="stickies">
-    <img src="stickies.png" width="1440" height="1224">
-  </figure>
+  <section id="intro">
+    Hallo & Herzlich Willkommen auf meiner Bewerbungswebsite. Wenn Sie jetzt denken
+    "Das hat mir gerade noch gefehlt", dann lassen Sie sich von mir genau davon überzeugen. Mein Name ist Sabrina Föder
+    und ich würde mich freuen, wenn Sie hier und heute herausfinden, dass Ihnen eine Mitarbeiterin wie ich
+    <strike>gerade</strike> noch gefehlt hat.
+  </section>
 
-  <h2>Klassischer gefällig?</h2>
+  <p id="tagline">Technisch gesehen sind wir alle ein Konglomerat aus Eigenschaften.</p>
 
-  <ol id="timeline">
-    <li>
-      <span class="bullet">
-        <span class="inner">
-          <time>03.2015</time>
-          bis<br>
-          heute
+  <picture id="stickies">
+    <source media="(max-width: 460px)" srcset="stickies/stickies_small.png">
+    <source media="(max-width: 920px)" srcset="stickies/stickies_medium.png">
+    <source media="(max-width: 1200px)" srcset="stickies/stickies_large.png">
+    <source srcset="stickies/stickies.png">
+    <img src="stickies/stickies.png" width="1440" height="1224">
+  </picture>
+
+  <section>
+    <h2>Klassischer gefällig?</h2>
+
+    <ol id="timeline">
+      <li>
+        <span class="bullet">
+          <span class="inner">
+            <time>03.2015</time>
+            bis<br>
+            heute
+          </span>
         </span>
-      </span>
 
-      <h3>Ausbildung mit Vorpraktikum:<br/>Kauffrau für Marketing&shy;kommunikation</h3>
-      <h4>Schommer Media GmbH</h4>
-      <ul>
-        <li>Ausbildung mit Zusatzqualifikation Kommunikationsmanagement</li>
-        <li>Führen von Kundenterminen, Beratungsgesprächen und Schulungen</li>
-        <li>eigenständige Koordination diverser Shop- und Website-Projekte</li>
-        <li>inklusive Kundenkorrespondenz</li>
-        <li>Erfassen von Kundenanforderungen<li>
-        <li>Konzeption von E-Shops und Websites</li>
-        <li>Konfiguration, Handhabung und Pflege (Shopware, OXID & TYPO3)</li>
-        <li>Unterstützung des Vertriebs bei der Wettbewerbsanalyse und
-          Angebotserstellung</li>
-      </ul>
-    </li>
+        <h3>Ausbildung mit Vorpraktikum:<br/>Kauffrau für Marketing&shy;kommunikation</h3>
+        <h4>Schommer Media GmbH</h4>
+        <ul>
+          <li>Ausbildung mit Zusatzqualifikation Kommunikationsmanagement</li>
+          <li>Führen von Kundenterminen, Beratungsgesprächen und Schulungen</li>
+          <li>eigenständige Koordination diverser Shop- und Website-Projekte</li>
+          <li>inklusive Kundenkorrespondenz</li>
+          <li>Erfassen von Kundenanforderungen<li>
+          <li>Konzeption von E-Shops und Websites</li>
+          <li>Konfiguration, Handhabung und Pflege (Shopware, OXID & TYPO3)</li>
+          <li>Unterstützung des Vertriebs bei der Wettbewerbsanalyse und
+            Angebotserstellung</li>
+        </ul>
+      </li>
 
-    <li>
-      <span class="bullet">
-        <span class="inner">
-          <time>07.2016</time>
-          bis<br>
-          heute
+      <li>
+        <span class="bullet">
+          <span class="inner">
+            <time>07.2016</time>
+            bis<br>
+            heute
+          </span>
         </span>
-      </span>
 
-      <h3>Marketing & Social Media-Management</h3>
-      <h4>Luftsportverein Backnang-Heiningen e.V.</h4>
-      <ul>
-        <li>ehrenamtliche Vereinsaktivität – Hauptverantwortliche in Marketing
-          und PR-Themen des Flugplatzes</li>
-        <li>wöchentliche Postings auf Facebook mit selbst angefertigten Fotos</li>
-        <li>erstes Posting: 30.07.2016, <a href="https://facebook.com/edsh.de" target="_blank">facebook/edsh.de</a></li>
-        <li>Beantwortung von Anfragen und Verteilung an Zuständige</li>
-        <li>Erstellung der Werbemittel für Feste: Plakate, Flyer, Zeitungsartikel,
-          Annoncen, Facebook-Veranstaltung + passende Postings, Rundmails</li>
-        <li>Betreuung der Website-Inhalte (aktuell Neukonzeption)</li>
-      </ul>
-    </li>
+        <h3>Marketing & Social Media-Management</h3>
+        <h4>Luftsportverein Backnang-Heiningen e.V.</h4>
+        <ul>
+          <li>ehrenamtliche Vereinsaktivität – Hauptverantwortliche in Marketing
+            und PR-Themen des Flugplatzes</li>
+          <li>wöchentliche Postings auf Facebook mit selbst angefertigten Fotos</li>
+          <li>erstes Posting: 30.07.2016, <a href="https://facebook.com/edsh.de" target="_blank">facebook/edsh.de</a></li>
+          <li>Beantwortung von Anfragen und Verteilung an Zuständige</li>
+          <li>Erstellung der Werbemittel für Feste: Plakate, Flyer, Zeitungsartikel,
+            Annoncen, Facebook-Veranstaltung + passende Postings, Rundmails</li>
+          <li>Betreuung der Website-Inhalte (aktuell Neukonzeption)</li>
+        </ul>
+      </li>
 
-    <li>
-      <span class="bullet">
-        <span class="inner">
-          <time>03.2014</time>
-          bis<br>
-          <time>03.2015</time>
+      <li>
+        <span class="bullet">
+          <span class="inner">
+            <time>03.2014</time>
+            bis<br>
+            <time>03.2015</time>
+          </span>
         </span>
-      </span>
 
-      <h3>Service in Gastronomie</h3>
-      <ul>
-        <li>Kundenkontakt</li>
-        <li>service- und prozessorientiertes Vorgehen</li>
-        <li>Unterstützung in Management und Marketing</li>
-      </ul>
-    </li>
+        <h3>Service in Gastronomie</h3>
+        <ul>
+          <li>Kundenkontakt</li>
+          <li>service- und prozessorientiertes Vorgehen</li>
+          <li>Unterstützung in Management und Marketing</li>
+        </ul>
+      </li>
 
-    <li>
-      <span class="bullet">
-        <span class="inner">
-          <time>2006</time>
-          bis<br>
-          <time>2015</time>
+      <li>
+        <span class="bullet">
+          <span class="inner">
+            <time>2006</time>
+            bis<br>
+            <time>2015</time>
+          </span>
         </span>
-      </span>
 
-      <h3>Nachhilfelehrerin</h3>
-      <ul>
-        <li>In den Fächern Deutsch, Englisch und Französisch</li>
-      </ul>
-    </li>
+        <h3>Nachhilfelehrerin</h3>
+        <ul>
+          <li>In den Fächern Deutsch, Englisch und Französisch</li>
+        </ul>
+      </li>
 
-    <li>
-      <span class="bullet">
-        <span class="inner">
-          <time>09.2011</time>
-          bis<br>
-          <time>12.2013</time>
+      <li>
+        <span class="bullet">
+          <span class="inner">
+            <time>09.2011</time>
+            bis<br>
+            <time>12.2013</time>
+          </span>
         </span>
-      </span>
 
-      <h3>Ausbildung zur Logopädin</h3>
-      <h4>SRH-Fachschule Stuttgart</h4>
-      <ul>
-        <li>Kommunikationslehre und Psychologie</li>
-      </ul>
-    </li>
+        <h3>Ausbildung zur Logopädin</h3>
+        <h4>SRH-Fachschule Stuttgart</h4>
+        <ul>
+          <li>Kommunikationslehre und Psychologie</li>
+        </ul>
+      </li>
 
-    <li>
-      <span class="bullet">
-        <span class="inner">
-          <time>09.2008</time>
-          bis<br>
-          <time>09.2011</time>
+      <li>
+        <span class="bullet">
+          <span class="inner">
+            <time>09.2008</time>
+            bis<br>
+            <time>09.2011</time>
+          </span>
         </span>
-      </span>
 
-      <h3>Studium Lehramt</h3>
-      <ul>
-        <li>Studienfächer: Deutsch, Soziologie, Biologie, Psychologie, Pädagogik</li>
-        <li>Exmatrikulation 2011</li>
-      </ul>
-    </li>
+        <h3>Studium Lehramt</h3>
+        <ul>
+          <li>Studienfächer: Deutsch, Soziologie, Biologie, Psychologie, Pädagogik</li>
+          <li>Exmatrikulation 2011</li>
+        </ul>
+      </li>
 
-    <li>
-      <span class="bullet">
-        <span class="inner">
-          <time style="margin-top: 38px">2008</time>
+      <li>
+        <span class="bullet">
+          <span class="inner">
+            <time style="margin-top: 38px">2008</time>
+          </span>
         </span>
-      </span>
 
-      <h3>Abitur (Allgemeine Hochschulreife)</h3>
-      <h4>Georg-Büchner-Gymnasium Winnenden</h4>
-      <ul>
-        <li>Hauptfächer: Deutsch, Englisch, Französisch, Mathematik, Geschichte</li>
-      </ul>
-    </li>
+        <h3>Abitur (Allgemeine Hochschulreife)</h3>
+        <h4>Georg-Büchner-Gymnasium Winnenden</h4>
+        <ul>
+          <li>Hauptfächer: Deutsch, Englisch, Französisch, Mathematik, Geschichte</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
 
-  </ol>
+  <section id="downloads">
+    <h2>Für Sammler & Papier&shy;liebhaber</h2>
+    <p>Hier finden Sie alle wichtigen Dokumente zum Downloaden.</p>
+
+    <ul>
+      <li><a class="button" href="downloads/lebenslauf.pdf">Lebenslauf</a></li>
+      <li><a class="button" href="downloads/zeugnis.pdf">Zeugnis</a></li>
+      <li><a class="button" href="downloads/arbeitszeugnis.pdf">Arbeitszeugnis</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Was mich begeistert</h2>
+
+    <picture id="interest_stickies">
+      <source media="(max-width: 460px)" srcset="stickies/interessen_small.png">
+      <source media="(max-width: 920px)" srcset="stickies/interessen_medium.png">
+      <source srcset="stickies/interessen.png">
+      <img src="stickies/interessen.png" width="1440" height="1224">
+    </picture>
+  </section>
+
 </main>
 
 <footer>
