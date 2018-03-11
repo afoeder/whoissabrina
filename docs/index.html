@@ -8,8 +8,15 @@
 
   <title>who.is.sabrina?</title>
 
-  <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Lato:300,400|Playfair+Display:400,700">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Playfair+Display:400,700"
+        rel="preload" as="style" onload="this.rel='stylesheet'">
+  <script>
+      /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+      !function(e){"use strict";var n=function(n,t,o){function i(e){if(a.body)return e();setTimeout(function(){i(e)})}function r(){l.addEventListener&&l.removeEventListener("load",r),l.media=o||"all"}var d,a=e.document,l=a.createElement("link");if(t)d=t;else{var f=(a.body||a.getElementsByTagName("head")[0]).childNodes;d=f[f.length-1]}var s=a.styleSheets;l.rel="stylesheet",l.href=n,l.media="only x",i(function(){d.parentNode.insertBefore(l,t?d:d.nextSibling)});var u=function(e){for(var n=l.href,t=s.length;t--;)if(s[t].href===n)return e();setTimeout(function(){u(e)})};return l.addEventListener&&l.addEventListener("load",r),l.onloadcssdefined=u,u(r),l};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);
+      /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+      !function(t){if(t.loadCSS){var e=loadCSS.relpreload={};if(e.support=function(){try{return t.document.createElement("link").relList.supports("preload")}catch(t){return!1}},e.poly=function(){for(var e=t.document.getElementsByTagName("link"),r=0;r<e.length;r++){var n=e[r];"preload"===n.rel&&"style"===n.getAttribute("as")&&(t.loadCSS(n.href,n,n.getAttribute("media")),n.rel=null)}},!e.support()){e.poly();var r=t.setInterval(e.poly,300);t.addEventListener&&t.addEventListener("load",function(){e.poly(),t.clearInterval(r)}),t.attachEvent&&t.attachEvent("onload",function(){t.clearInterval(r)})}}}(this);
+  </script>
+
   <style type="text/css">
     body {
       font-family: 'Lato', sans-serif;
@@ -433,15 +440,15 @@
 
   <hr>
 
-  <img id="concact" src="Kontaktieren.png?sha=a0f62ccd">
+  <img id="concact" src="Kontaktieren.png?sha=dwjjEBl8" width="627" height="159">
 
   <nav>
     <ul>
-      <li><a href="mailto:sabrina@foeder.de"><img src="mail_sabrina.png?sha=a0f62ccd" height="46" width="59"/></a></li>
-      <li><a href="tel:+4917624404259"><img src="mobile_sabrina.png?sha=a0f62ccd" height="85" width="66"/></a></li>
-      <li><a href="https://www.xing.com/profile/Sabrina_Foeder" target="_blank"><img src="xing_sabrina.png?sha=a0f62ccd" height="58" width="53"/></a></li>
-      <li><a href="https://twitter.com/sabrinatxt" target="_blank"><img src="twitter_sabrina.png?sha=a0f62ccd" height="61" width="71"/></a></li>
-      <li><a href="https://facebook.com/edsh.de" target="_blank"><img src="facebook_sabrina.png?sha=a0f62ccd" height="65" width="38"/></a></li>
+      <li><a href="mailto:sabrina@foeder.de"><img src="mail_sabrina.png?sha=dwjjEBl8" height="46" width="59"/></a></li>
+      <li><a href="tel:+4917624404259"><img src="mobile_sabrina.png?sha=dwjjEBl8" height="85" width="66"/></a></li>
+      <li><a href="https://www.xing.com/profile/Sabrina_Foeder" target="_blank"><img src="xing_sabrina.png?sha=dwjjEBl8" height="58" width="53"/></a></li>
+      <li><a href="https://twitter.com/sabrinatxt" target="_blank"><img src="twitter_sabrina.png?sha=dwjjEBl8" height="61" width="71"/></a></li>
+      <li><a href="https://facebook.com/edsh.de" target="_blank"><img src="facebook_sabrina.png?sha=dwjjEBl8" height="65" width="38"/></a></li>
     </ul>
   </nav>
 
